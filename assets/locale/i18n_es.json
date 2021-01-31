@@ -1,0 +1,16 @@
+{
+  "welcome": "Bienvenid@!",
+  "dark_mode" : "Tema oscuro",
+  "list_screen_title": "Flutter Issues",
+  "detail_screen_title": "Detalle de Issue",
+  "issue_state": "Estado: ",
+  "issue_title": "Titulo: ",
+  "issue_description": "Descripción: ",
+  "issue_url": "Ver en Github",
+  "issue_author": "Autor: ",
+  "issue_date_created": "Creado: ",
+  "issue_number": "Issue: ",
+  "issue_date_closed": "Cerrado: ",
+  "filter_state": "Filtrar issues por estado",
+  "filter_text": "Filtrar issues por fecha o número"
+}

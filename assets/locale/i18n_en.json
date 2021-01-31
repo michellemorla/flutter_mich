@@ -1,0 +1,16 @@
+{
+  "welcome" : "Welcome!",
+  "dark_mode" : "Dark mode",
+  "list_screen_title": "Flutter Issues",
+  "detail_screen_title": "Issue Detail",
+  "issue_state": "State: ",
+  "issue_title": "Title: ",
+  "issue_description": "Description: ",
+  "issue_url": "View on Github",
+  "issue_author": "Author: ",
+  "issue_date_created": "Created: ",
+  "issue_number": "Issue: ",
+  "issue_date_closed": "Closed: ",
+  "filter_state": "Filter issues by state",
+  "filter_text": "Filter issues by date or number"
+}
