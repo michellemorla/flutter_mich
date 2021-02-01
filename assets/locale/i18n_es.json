@@ -9,7 +9,7 @@
   "issue_url": "Ver en Github",
   "issue_author": "Autor: ",
   "issue_date_created": "Creado: ",
-  "issue_number": "Issue: ",
+  "issue_number": "Número: ",
   "issue_date_closed": "Cerrado: ",
   "filter_state": "Filtrar issues por estado",
   "filter_text": "Filtrar issues por fecha o número"

@@ -10,10 +10,6 @@ class IssuesListScreenController extends ChangeNotifier {
   final IGithubIssuesRepo _githubIssuesRepo = GithubIssuesRepository(Dio());
   List<GithubIssue> githubIssues = [];
 
-/*  Future<List<GithubIssue>> getAllIssues(){
-    return _githubIssuesRepo.getAllIssues();
-  }*/
-
   getIssuesByState(String state) async {
     githubIssues = await _githubIssuesRepo.getIssuesByState(state);
     notifyListeners();

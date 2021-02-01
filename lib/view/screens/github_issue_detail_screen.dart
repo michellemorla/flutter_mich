@@ -45,12 +45,16 @@ class GithubIssueDetailScreen extends StatelessWidget {
                         ),
                         SizedBox(height: Dimens.marginGlobal2,),
                         _builtTextRow(context,
+                            Translations.of(context).trans('issue_number'),
+                            issue.number?.toString() ?? ""),
+                        _builtTextRow(context,
                             Translations.of(context).trans('issue_author'),
                             issue.author?.login ?? ""),
-                        _builtTextRow(context,
+                        issue.dateCreated != null ? _builtTextRow(context,
                             Translations.of(context).trans('issue_date_created'),
-                            Formatter.dateToString(issue.dateCreated)),
-                        issue.state.toUpperCase() == GithubIssue.STATUS_CLOSE ?
+                            Formatter.dateToString(issue.dateCreated)) : Wrap(),
+                        issue.state.toUpperCase() == GithubIssue.STATUS_CLOSE &&
+                            issue.dateCreated != null ?
                         _builtTextRow(context,
                             Translations.of(context).trans('issue_date_closed'),
                             Formatter.dateToString(issue.dateClosed)) : Wrap(),

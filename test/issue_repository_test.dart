@@ -12,9 +12,7 @@ void main(){
     mockGithubIssuesRepository = MockGithubIssuesRepository();
   });
 
-  test(
-      'When the function getAllIssues is called it should return a list of issues',
-          () async {
+  test('When the function getIssuesByState is called it should return a list of issues', () async {
         when(mockGithubIssuesRepository.getIssuesByState('all')).thenAnswer((_) => Future.value(
             [
               GithubIssue(
@@ -37,7 +35,7 @@ void main(){
                   id: 797127279,
                   url: 'url',
                   number: 75014,
-                  state: 'open',
+                  state: 'closed',
                   title: "a title",
                   body: "a body"
               )

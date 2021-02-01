@@ -44,8 +44,7 @@ class GithubIssuesListState extends State<GithubIssuesListScreen> {
     final gitIssuesNotifier = Provider.of<IssuesListScreenController>(context);
     _showLoading = gitIssuesNotifier.githubIssues.isEmpty;
 
-    final themeNotifier = Provider.of<ThemeNotifier>(context);
-    _switchTheme = (themeNotifier.getTheme() == appThemeDark);
+    _switchTheme = Theme.of(context).brightness == Brightness.dark;
 
     return WillPopScope(
       onWillPop: () async {
@@ -59,6 +58,7 @@ class GithubIssuesListState extends State<GithubIssuesListScreen> {
               padding: const EdgeInsets.only(right: Dimens.marginGlobal2),
               child: InkWell(
                 onTap: (){
+                  final themeNotifier = Provider.of<ThemeNotifier>(context, listen: false);
                   setState(() {
                     _switchTheme = !_switchTheme;
                   });
@@ -140,6 +140,7 @@ class GithubIssuesListState extends State<GithubIssuesListScreen> {
 
   Widget _buildRowItem(BuildContext context, GithubIssue issue){
     return ListTile(
+      key: Key('go_to'),
       onTap: (){
         Navigator.push(context,
             MaterialPageRoute(
